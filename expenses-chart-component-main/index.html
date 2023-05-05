@@ -29,17 +29,22 @@
         --marromEscuro: #402718;
         --vermelho: #f26f63;
         --branco: #fff;
+        --cinza: #c3c0bb;
       }
-      .attribution {
+
+  .attribution {
         font-size: 11px;
         text-align: center;
       }
+      
       a {
         text-decoration: none;
+        color: var(--branco);
       }
 
       body {
         background-color: var(--creme);
+        font-size: "DM Sans", sans-serif;
       }
 
       .container {
@@ -64,14 +69,17 @@
         color: var(--branco);
       }
 
-      .money {
-        font-weight: 700;
+      .balance {
+        font-weight: 400;
+        font-size: 0.8rem;
+       
       }
 
-      .logo {
-        display: flex;
+      .money {
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-top: .1rem;
 
-        align-self: flex-end;
       }
 
       .box-2 {
@@ -80,8 +88,13 @@
         background-color: var(--branco);
         border-radius: 0.5rem;
 
-        height: 20rem;
+        
         width: 30rem;
+      }
+
+      .caixa{
+        display: flex;
+        justify-content: space-between;
       }
 
       .days {
@@ -94,16 +107,20 @@
       .weeks {
         display: flex;
         flex-direction: row;
+        color: var(--cinza);
+        
       }
 
       .month {
         display: flex;
         flex-direction: column;
-        justify-items: end;
+        
       }
 
       .total-month {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+        color: var(--cinza);
+     
       }
 
       .Money {
@@ -117,6 +134,17 @@
         flex-direction: column;
         align-items: flex-end;
       }
+
+      .fLastMth {
+        color: var(--cinza);
+      }
+
+      hr{
+        color: var(--cinza);
+      }
+
+    
+
     </style>
   </head>
   <body>
@@ -126,13 +154,17 @@
           <p class="balance">My balance</p>
           <p class="money">$921.48</p>
 
-          <img class="logo" src="./images/logo.svg" alt="" />
+  <img class="logo" src="./images/logo.svg" alt="" />
+
+         
         </section>
 
         <section class="box-2">
           <article class="days">
             <p>Spending - Last 7 days</p>
           </article>
+
+         
 
           <article class="weeks">
             <p class="mon">mon</p>
@@ -143,16 +175,19 @@
             <p class="sat">sat</p>
             <p class="sun">sun</p>
           </article>
-
-          <article class="month">
-            <p class="total-month">Total this month</p>
-            <p class="Money">$478.33</p>
-          </article>
-
-          <article class="porcetagem">
-            <p>+2.4%</p>
-            <p>from last month</p>
-          </article>
+<hr>
+          <section class="caixa">
+            <article class="month">
+              <p class="total-month">Total this month</p>
+              <p class="Money">$478.33</p>
+            </article>
+  
+            <article class="porcetagem">
+              <p>+2.4%</p>
+              <p class="fLastMth">from last month</p>
+            </article>
+          </section>
+          
         </section>
       </div>
     </main>
